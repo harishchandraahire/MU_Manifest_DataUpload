@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node smoke2.mjs)",
+      "Bash(node debug-zindex.mjs)",
+      "Bash(node smoke3.mjs)",
+      "Bash(taskkill //PID 18400 //F)",
+      "Bash(node -e ' *)",
+      "Bash(rm -rf node_modules/.vite)",
+      "Bash(nohup npm run dev)",
+      "Bash(node smoke4.mjs)",
+      "Bash(node debug-modal.mjs)",
+      "Bash(taskkill //PID 27124 //F)",
+      "Bash(curl -sk -o /dev/null -w \"HTTP %{http_code}\\\\n\" https://localhost:7248/api/token/create -X POST -H \"Content-Type: application/json\" -d '{\"Login\":\"skynet\",\"Password\":\"skynet\",\"MachineName\":\"test\"}' --max-time 5)",
+      "Bash(curl -sk https://localhost:7248/api/token/create -X POST -H \"Content-Type: application/json\" -d '{\"Login\":\"skynet\",\"Password\":\"skynet\",\"MachineName\":\"test\"}' --max-time 5)",
+      "Bash(node smoke-real-api.mjs)",
+      "Bash(node smoke-token-reuse.mjs)",
+      "Bash(node smoke-network-error.mjs)",
+      "Bash(taskkill //PID 22256 //F)",
+      "Bash(node smoke-chunked.mjs)",
+      "Bash(taskkill //PID 11032 //F)",
+      "Bash(node smoke-retry-fix.mjs)"
+    ]
+  }
+}
